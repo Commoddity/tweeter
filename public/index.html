@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
-
+    <!--Page Title-->
+    <title>Tweeter</title>
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/responsive-layout.css" type="text/css" />
     <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script> 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <!--MomentJS-->
+    <script src="moment.js"></script>
+    <script>
+        moment().format();
+    </script>
+    <!--Disable Viewport Zoom-->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
+  <!--Body Begins-->
   <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+
+    <!--Top nav bar-->
+    <nav id="nav-bar">
+      <span id="tweeter-logo">tweeter</span>
+      <div class="click-scroll" id="click-scroll">
+        <span id="tweeter-text"><strong>Write</strong> a new tweet</span>
+        <img id="chevron" src="https://i.ibb.co/nrksFWM/1024px-Double-angle-left-font-awesome-svg.png">
+      </div>
     </nav>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <!--FLEXBOX Layout Begins-->
+    <div class="flex-row">
+
+      <!--FLEXBOX Column 1-->
+      <div id="fixed">
+        <header id="header">
+          <div>
+              <img class="hvr-pulse-grow" src="/images/profile-hex.png"> 
+          </div>
+          <br>
+          <div>
+              <h2>Pascal van Leeuwen</h2>
+          </div>
+        </header>
+      </div>
+
+      <!--FLEXBOX Column 2-->
+      <!--New Tweet entry is here-->
+      <main class="container">
+        <section class="new-tweet" id="new-tweet">
+          <div class="error-message">
+          </div>
+          <h2>Compose Tweet</h2>
+          <form>
+            <textarea name="text" placeholder="Hey, what're you thinking about?"></textarea>
+            <input id="tweet-submit" method="POST" action="/tweets/" type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+
+        <div class="tweets">
+        <!--Tweets load inside here-->
+        </div>
+
+      </main>
+    </div>
+    <!--FLEXBOX Layout Ends-->
+
   </body>
 </html>

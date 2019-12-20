@@ -1,0 +1,60 @@
+header{
+  height: 400px;
+  width: 100%;
+  margin-top: 100px;
+  background-color: #231548;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header img {
+  position: relative;
+  top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  filter: invert(100%) saturate(29) hue-rotate(422deg) brightness(79%) contrast(97%) drop-shadow(2px 2px 0 purple) drop-shadow(-2px -2px 0 pink);
+}
+
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.hvr-pulse-grow {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  filter: invert(100%) saturate(29) hue-rotate(422deg) brightness(79%) contrast(97%) drop-shadow(3px 3px 0 purple) drop-shadow(-3px -3px 0 pink);
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+header h2 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 4px 4px 6px #000000;
+}

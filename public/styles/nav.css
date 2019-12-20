@@ -1,0 +1,53 @@
+#nav-bar {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 5;
+  background-color: #1c0852;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 1.5em;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#tweeter-logo {
+  font-family: 'Bungee', cursive;
+  text-shadow: 4px 4px 6px #000000;
+}
+
+nav .click-scroll {
+  float: right;
+  position: relative;
+  bottom: 15px;
+}
+
+#tweeter-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 4px 4px 6px #000000;
+  display: block;
+}
+
+#chevron {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 45px;
+  filter: invert(6%) sepia(100%) saturate(6525%) hue-rotate(299deg) brightness(116%) contrast(91%) drop-shadow(2px 2px 0 black);
+  animation: bounce 0.8s;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+.click-scroll:hover > #chevron {
+  animation-play-state: running;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  filter: invert(6%) sepia(100%) saturate(8525%) hue-rotate(299deg) brightness(116%) contrast(91%) drop-shadow(2px 2px 0 black);
+  height:55px;
+}
+
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}

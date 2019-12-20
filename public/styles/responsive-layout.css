@@ -1,0 +1,64 @@
+@media only screen and (min-width: 1024px) {
+
+  article {
+    opacity: 0.9;
+  }
+
+  article > p {
+    font-size: 24px;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 100%;
+    flex: 1;
+    height: 400px;
+    width: 400px;
+    margin-top: 125px;
+    margin-left: 25px;
+    border-radius: 30px 120px 80px;
+  }
+
+  header h2 {
+    position: relative;
+    bottom: 7px;
+    left: 9px;
+  }
+
+  .tweets {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 66%;
+    margin-top: 110px; 
+  }
+
+  #fixed {
+    width: 25%;
+    height: 25vh;
+    position: sticky;
+    top: 0;
+  }
+
+  .new-tweet .error-message {
+    width: 600px;
+    font-size: 25px;
+  }
+
+}

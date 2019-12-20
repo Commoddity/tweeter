@@ -1,24 +1,58 @@
 [
+  
   {
     "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
+      "name": "Kanye West",
+      "avatars": "https://i.ibb.co/26zTR0P/download.jpg",
+      "handle": "@jesusIsKing"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Tweakin', tweakin' off that 2C-B, huh. Is he gon' make it? TBD, huh. Thought I was gon' run, DMC, huh. I done died and lived again on DMT, huh"
     },
-    "created_at": 1461116232227
+    "created_at": 1461112456782
   },
   {
     "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
+      "name": "Nickelback",
+      "avatars": "https://i.ibb.co/0C1Y09T/screen-shot-2017-06-21-at-11-39-33-am.png",
+      "handle": "@albertaStrong"
     },
-    "created_at": 1461113959088
+    "content": {
+      "text": "Look at this photograph. Every time I do it makes me laugh. How did our eyes get so red? And what the hell is on Joey's head?"
+    },
+    "created_at": 1461113769856
+  },
+  {
+    "user": {
+      "name": "Slayer",
+      "avatars": "https://i.ibb.co/pv1sbkw/500x500.jpg",
+      "handle": "@reignInBlood"
+    },
+    "content": {
+      "text": "Watch as flowers decay, On the cryptic life that died, The wisdom of the wizards, Is only a neutered lie, Black knights of Hell's domain"
+    },
+    "created_at": 1461114789432
+  },
+  {
+    "user": {
+      "name": "Weird Al",
+      "avatars": "https://i.ibb.co/Jn5cWQd/weird-al.jpg",
+      "handle": "@yankovichForLife"
+    },
+    "content": {
+      "text": "Think I'm just too white and nerdy. Think I'm just too white and nerdy. Can't you see I'm white and nerdy? Look at me, I'm white and nerdy"
+    },
+    "created_at": 1461115780985
+  },
+  {
+  "user": {
+    "name": "Aesop Rock",
+    "avatars": "https://i.ibb.co/6vPYLsf/rock-aesop-image.jpg",
+    "handle": "@theImpossibleKid"
+    },
+  "content": {
+      "text": "Flash that buttery gold. Jittery zeitgeist, wither by the watering hole, what a patrol. What are we to Heart Huckabee, art fuckery suddenly."
+    },
+  "created_at": 1461116232227
   }
 ]
