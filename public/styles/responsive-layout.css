@@ -53,7 +53,8 @@
     width: 25%;
     height: 25vh;
     position: sticky;
-    top: 0;
+    top: 0px;
+    min-width: 455px;
   }
 
   .new-tweet .error-message {

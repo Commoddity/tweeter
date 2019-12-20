@@ -48,12 +48,13 @@ const renderTweets = (tweets) => {
 };
 
 //Sends an AJAX request to stored Tweet Database and renders upon success
-const loadTweets = function(tweets) {
+const loadTweets = function() {
   $.ajax({
     url: '/tweets',
     method: 'GET',
     dataType: 'json',
-    success: renderTweets
+    success: renderTweets,
+    // fail: 
   });
 };
 
@@ -83,6 +84,7 @@ $(function() {
     event.preventDefault();
     const form = $(this);
     const newTweet = form.serialize();
+    //FIX
     if (newTweet.length - 5 === 0) {
       $('.error-message').html(`
         <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger1'>
@@ -125,19 +127,19 @@ $(function() {
   $('.click-scroll').click(function() {
     const elementTarget = document.getElementById('header');
     if (window.scrollY > (elementTarget.offsetHeight)) {
+      // we're scrolled down.  so let's scroll up, and make sure the form is visible
       if ($(window).width() < 1024) {
         $('html, body').animate({ scrollTop: 400 }, 'slow');
       } else {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
       }
       $('#new-tweet:hidden').slideToggle('slow');
-      $('.error-message').hide();
-      $('textarea').focus();
     } else {
+      // we're NOT scrolled down.  so whatever visibility the form had, toggle it.
       $('#new-tweet').slideToggle('slow');
-      $('.error-message').hide();
-      $('textarea').focus();
     }
+    $('.error-message').hide();
+    $('textarea').focus();
   });
 });
 
@@ -157,4 +159,7 @@ $(document).ready(function() {
 });
 
 //Inital call of Load Tweets function to load example tweets stored in database.
-loadTweets();
+
+$(document).ready(function() {
+  loadTweets();
+});
