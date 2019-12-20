@@ -40,16 +40,6 @@ const createTweetElement = (data) => {
   return tweet;
 };
 
-//Populates error bar with HTML and error message
-const createErrorBar = (errorText) => {
-  $('.error-message').html(`
-    <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger1'>
-    ${errorText}
-    <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger2'>`);
-  $('.error-message:hidden').slideToggle(500);
-  setTimeout(function() { $('.error-message:visible').slideToggle(500) }, 2000);
-};
-
 //Loops through Tweets and renders them on page via prepending to HTML container
 const renderTweets = (tweets) => {
   for (let i = loadedTweets; i < tweets.length; i++) {
@@ -72,12 +62,21 @@ const loadTweets = function() {
   });
 };
 
-//Error Messages
 //Hides error message and new tweet form on page load
 $(document).ready(function() {
   $('.error-message').hide();
   $('.new-tweet').hide();
 });
+
+//Populates error bar with HTML and error message
+const createErrorBar = (errorText) => {
+  $('.error-message').html(`
+    <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger1'>
+    ${errorText}
+    <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger2'>`);
+  $('.error-message:hidden').slideToggle(500);
+  setTimeout(function() { $('.error-message:visible').slideToggle(500) }, 2000);
+};
 
 //New Tweet Form Submission function, including error message display.
 //On form submission, sends AJAX post request, calls loadTweets function and resets text form, counter and error message
@@ -115,7 +114,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.click-scroll').click(function() {
     if (window.scrollY > (0)) {
-      // we're scrolled down.  so let's scroll up, and make sure the form is visible
+      //If viewport is scrolled down, scroll up and ensure new tweet field is visible.
       if ($(window).width() < 1024) {
         $('html, body').animate({ scrollTop: 400 }, 'slow');
       } else {
@@ -123,7 +122,7 @@ $(document).ready(function() {
       }
       $('#new-tweet:hidden').slideToggle('slow');
     } else {
-      // we're NOT scrolled down.  so whatever visibility the form had, toggle it.
+      //If viewport is not scrolled down, toggle new tweet field.
       $('#new-tweet').slideToggle('slow');
     }
     $('.error-message').hide();
