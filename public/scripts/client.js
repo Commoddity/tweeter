@@ -114,7 +114,6 @@ $(document).ready(function() {
 //Includes different behavior depending on responsive layout.
 $(document).ready(function() {
   $('.click-scroll').click(function() {
-    const elementTarget = document.getElementById('header');
     if (window.scrollY > (0)) {
       // we're scrolled down.  so let's scroll up, and make sure the form is visible
       if ($(window).width() < 1024) {
