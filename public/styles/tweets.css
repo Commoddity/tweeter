@@ -37,6 +37,7 @@ article:hover .icons {
 .username {
   font-weight: bold;
   vertical-align: top;
+  opacity: 0.7
 }
 
 .handle {
@@ -53,6 +54,7 @@ article > p {
   font-family: Helvetica, sans-serif;
   font-size: 24px;
   text-align: center;
+  opacity: 0.6;
   word-wrap: break-word;
   margin: 10px;
   margin-left: auto;
@@ -61,7 +63,8 @@ article > p {
 }
 
 article:hover p {
-  font-weight: 600;
+  opacity: 1;
+  text-shadow: 0.25px 0.25px 1px #2e2e2e;
 }
 
 .tweet-footer {
