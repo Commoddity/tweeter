@@ -65,5 +65,16 @@
       "text": "Here's a little song I wrote, You might want to sing it note for note, Don't worry, be happy, Don't worry, be happy, Ooo ooo ooo, Be Happy."
     },
   "created_at": 1461117997642
+  },
+  {
+  "user": {
+    "name": "Jimmy Buffett",
+    "avatars": "https://i.ibb.co/ZNhCtnb/Jimmy-Buffett-500x500.jpg",
+    "handle": "@bigKosherPickle"
+    },
+  "content": {
+      "text": "Cheeseburger in paradise, Medium rare with Muenster'd be nice, Heaven on earth with an onion slice, I'm just a cheeseburger in paradise."
+    },
+  "created_at": 1461117997642
   }
 ]
