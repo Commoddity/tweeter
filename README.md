@@ -7,17 +7,17 @@ My implementation incorporates much of the knowldge I have acquired in my time i
 - AJAX requests
 - client-side Javascript
 - jQuery
-- HTML/CSS styling
+- HTML/CSS layout & styling
 - flexbox
 - responsive layouts
 
 # Screenshots
 
 !["Desktop View"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-wide.png)
-Desktop View
+_Desktop View_
 
 !["Mobile View"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-narrow.png)
-Mobile View
+_Mobile View_
 
 # CSS Hover
 Includes one effect from the [Hover.css](https://ianlunn.github.io/Hover/) collection by [Ian Lunn](https://github.com/IanLunn) and used under a free open source license for personal use.
