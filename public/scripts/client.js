@@ -139,7 +139,7 @@ $(document).ready(() => {
   $(window).scroll(() => {
     if ($(window).scrollTop() > 400) {
       $('#float-button:hidden').show().animate({opacity: 0.9}, 1500);
-    } else if ($(window).scrollTop() < 400) {
+    } else if ($(window).scrollTop() <= 400) {
       $('#float-button:visible').fadeOut(1000);
     }
   })
