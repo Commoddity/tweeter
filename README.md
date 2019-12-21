@@ -14,7 +14,7 @@ My implementation incorporates much of the knowldge I have acquired in my time i
 # Screenshots
 
 !["Desktop View"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-wide.png)
-Desktop view
+Desktop View
 
 !["Mobile View"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-narrow.png)
 Mobile View
