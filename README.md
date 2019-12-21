@@ -2,7 +2,8 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-My implementation incorporates the variety of coding knowledge I have acquired over my time in boot camp, including:
+My implementation incorporates much of the knowldge I have acquired in my time in boot camp so far, including:
+
 - AJAX requests
 - client-side Javascript
 - jQuery
@@ -12,8 +13,13 @@ My implementation incorporates the variety of coding knowledge I have acquired o
 
 # Screenshots
 
+!["Desktop View"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-wide.png)
+Desktop view
 
+!["Mobile View"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-narrow.png)
+Mobile View
 
+# Dependencies
 - Express
 - Body-parser
 - Chance
