@@ -1,6 +1,6 @@
 //Clientside Javascript
 
-//Variable to store total number of loaded tweets (increments by one each Tweet posted)
+//Variable to store total number of loaded tweets (increments up by one each Tweet posted)
 let loadedTweets = 0;
 
 //Escape function to disable potential malicious scripts
@@ -10,7 +10,7 @@ const escape =  function(str) {
   return div.innerHTML;
 };
 
-//Twet Generation Functions Follow
+//Tweet Generation Functions Follow
 //Creates Tweet Div for each Post, including jQuery animations, using information stored in database and a randomly generated ID for each Tweet
 const createTweetElement = (data) => {
   const date = new Date(data.created_at);
@@ -98,13 +98,15 @@ $(document).ready(function() {
         method: 'POST',
         url: '/tweets/'
       })
-      .then(loadTweets)
+      .then(()=>{
+        loadTweets()
+        $('.new-tweet form')[0].reset();
+        $('.counter').text('140');
+        $('.error-message:visible').slideToggle('slow');
+      })
       .fail((err) => {
           console.log(err);
         });
-      $('.new-tweet form')[0].reset();
-      $('.counter').text('140');
-      $('.error-message:visible').slideToggle('slow');
     }
   });
 });
