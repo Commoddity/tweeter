@@ -4,10 +4,10 @@
 let loadedTweets = 0;
 
 //Escape function to disable potential malicious scripts
-const escape =  function(str) {
-  let div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
+const escape = (str) => {
+  const escDiv = document.createElement('div');
+  escDiv.appendChild(document.createTextNode(str));
+  return escDiv.innerHTML;
 };
 
 //Tweet Generation Functions Follow
@@ -47,20 +47,21 @@ const createTweetElement = (data) => {
       ${errorText}
       <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger2'>`);
     $('.error-message:hidden').slideToggle(500);
-    setTimeout(function() { $('.error-message:visible').slideToggle(500) }, 2000);
+    setTimeout(() => { $('.error-message:visible').slideToggle(500) }, 2000);
   };
   
   //Loops through Tweets and renders them on page via prepending to HTML container
   const renderTweets = (tweets) => {
+    const queriedHTML = $('.container .tweets')
   for (let i = loadedTweets; i < tweets.length; i++) {
     loadedTweets++;
     const tweetElement = createTweetElement(tweets[i]);
-    $('.container .tweets').prepend(tweetElement);
+    queriedHTML.prepend(tweetElement);
   }
 };
 
 //Sends an AJAX request to stored Tweet Database and renders upon success
-const loadTweets = function() {
+const loadTweets = () => {
   $.ajax({
     url: '/tweets',
     method: 'GET',
@@ -73,14 +74,14 @@ const loadTweets = function() {
 };
 
 //Hides error message and new tweet form on page load
-$(document).ready(function() {
+$(document).ready(() => {
   $('.error-message').hide();
   $('.new-tweet').hide();
 });
 
 //New Tweet Form Submission function, including error message display.
 //On form submission, sends AJAX post request, calls loadTweets function and resets text form, counter and error message
-$(document).ready(function() {
+$(document).ready(() => {
   $('.new-tweet form').submit(function(event) {
     event.preventDefault();
     const form = $(this);
@@ -113,8 +114,8 @@ $(document).ready(function() {
 
 //Write a new tweet link that scrolls to New Tweet input form.
 //Includes different behavior depending on responsive layout.
-$(document).ready(function() {
-  $('.click-scroll').click(function() {
+$(document).ready(() => {
+  $('.click-scroll').click(() => {
     if (window.scrollY > (0)) {
       //If viewport is scrolled down, scroll up and ensure new tweet field is visible.
       if ($(window).width() < 1024) {
@@ -133,8 +134,8 @@ $(document).ready(function() {
 });
 
 //Function that counts the number of characters left of the 140 character limit. Turns red at negative values.
-$(document).ready(function() {
-  $('.new-tweet textarea').keyup(function() {
+$(document).ready(() => {
+  $('.new-tweet textarea').keyup(() => {
     let count = $('.new-tweet textarea').val().length;
     let charsLeft = 140 - count;
     $('.counter').html(`<span class="counter">${charsLeft}</span>`);
@@ -148,6 +149,6 @@ $(document).ready(function() {
 });
 
 //Inital call of Load Tweets function to load example tweets stored in database.
-$(document).ready(function() {
+$(document).ready(() => {
   loadTweets();
 });

@@ -9,7 +9,7 @@ My implementation incorporates much of the knowldge I have acquired in my time i
 - jQuery
 - HTML/CSS layout & styling
 - flexbox
-- responsive layouts
+- responsive layout
 
 # Screenshots
 
@@ -26,5 +26,4 @@ Includes one effect from the [Hover.css](https://ianlunn.github.io/Hover/) colle
 - Express
 - Body-parser
 - Chance
-- Express
 - Node 5.10.x or above
