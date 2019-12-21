@@ -98,7 +98,7 @@ $(document).ready(function() {
         method: 'POST',
         url: '/tweets/'
       })
-      .then(()=>{
+      .then(() => {
         loadTweets()
         $('.new-tweet form')[0].reset();
         $('.counter').text('140');
