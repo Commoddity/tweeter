@@ -89,10 +89,10 @@ $(document).ready(() => {
     const newTweet = form.serialize();
     const prefixLength = ($('#tweet-form').attr('name').length) + 1;
     if (newTweet.length - prefixLength === 0) {
-      createErrorBar('Your Tweet must contain some characters!')
+      createErrorBar('Your Tweet must contain some characters!');
       return false;
     } else if (newTweet.length - prefixLength > 140) {
-      createErrorBar('Your Tweet must be 140 characters or less!')
+      createErrorBar('Your Tweet must be 140 characters or less!');
       return false;
     } else {
       $.ajax({
@@ -101,7 +101,7 @@ $(document).ready(() => {
         url: '/tweets/'
       })
       .then(() => {
-        loadTweets()
+        loadTweets();
         $('.new-tweet form')[0].reset();
         $('.counter').text('140');
         $('.error-message:visible').slideToggle('slow');

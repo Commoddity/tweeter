@@ -47,6 +47,8 @@
     justify-content: center;
     width: 66%;
     margin-top: 110px; 
+    margin-right: 3vw;
+    margin-left: 3vw;
   }
 
   #fixed {
