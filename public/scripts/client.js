@@ -107,7 +107,7 @@ $(document).ready(() => {
         $('.error-message:visible').slideToggle('slow');
       })
       .fail((err) => {
-          console.log(err);
+        console.log(err);
       });
     }
   });
