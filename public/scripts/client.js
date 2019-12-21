@@ -108,7 +108,7 @@ $(document).ready(() => {
       })
       .fail((err) => {
           console.log(err);
-        });
+      });
     }
   });
 });
