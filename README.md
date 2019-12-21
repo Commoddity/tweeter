@@ -19,6 +19,10 @@ Desktop View
 !["Mobile View"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-narrow.png)
 Mobile View
 
+# CSS Hover
+Includes one effect from the Hover.css collection by Ian Lunn and used under a free open source license for person use.
+Collection can be found at: https://ianlunn.github.io/Hover/
+
 # Dependencies
 - Express
 - Body-parser
