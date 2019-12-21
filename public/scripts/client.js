@@ -37,11 +37,21 @@ const createTweetElement = (data) => {
       maxHeight: '800px',
       opacity: 1
     }, 1500);
-  return tweet;
-};
-
-//Loops through Tweets and renders them on page via prepending to HTML container
-const renderTweets = (tweets) => {
+    return tweet;
+  };
+  
+  //Populates error bar with HTML and error message
+  const createErrorBar = (errorText) => {
+    $('.error-message').html(`
+      <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger1'>
+      ${errorText}
+      <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger2'>`);
+    $('.error-message:hidden').slideToggle(500);
+    setTimeout(function() { $('.error-message:visible').slideToggle(500) }, 2000);
+  };
+  
+  //Loops through Tweets and renders them on page via prepending to HTML container
+  const renderTweets = (tweets) => {
   for (let i = loadedTweets; i < tweets.length; i++) {
     loadedTweets++;
     const tweetElement = createTweetElement(tweets[i]);
@@ -67,16 +77,6 @@ $(document).ready(function() {
   $('.error-message').hide();
   $('.new-tweet').hide();
 });
-
-//Populates error bar with HTML and error message
-const createErrorBar = (errorText) => {
-  $('.error-message').html(`
-    <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger1'>
-    ${errorText}
-    <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger2'>`);
-  $('.error-message:hidden').slideToggle(500);
-  setTimeout(function() { $('.error-message:visible').slideToggle(500) }, 2000);
-};
 
 //New Tweet Form Submission function, including error message display.
 //On form submission, sends AJAX post request, calls loadTweets function and resets text form, counter and error message
