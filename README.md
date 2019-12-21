@@ -17,7 +17,7 @@ My implementation incorporates much of the knowldge I have acquired in my time i
 _Desktop View_
 
 !["Mobile View"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-narrow.png)
-_Mobile View"
+_Mobile View_
 
 Stretch Feature Implementation:
 !["Stretch Feature"](https://github.com/Commoddity/tweeter/blob/master/doc/tweetscreen-stretch.png)
