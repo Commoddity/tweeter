@@ -73,10 +73,11 @@ const loadTweets = () => {
   });
 };
 
-//Hides error message and new tweet form on page load
+//Hides error message, new tweet form and scroll button on page load
 $(document).ready(() => {
   $('.error-message').hide();
   $('.new-tweet').hide();
+  $('#float-button').hide();
 });
 
 //New Tweet Form Submission function, including error message display.
@@ -116,7 +117,7 @@ $(document).ready(() => {
 //Includes different behavior depending on responsive layout.
 $(document).ready(() => {
   $('.click-scroll').click(() => {
-    if (window.scrollY > (0)) {
+    if (window.scrollY > 0) {
       //If viewport is scrolled down, scroll up and ensure new tweet field is visible.
       if ($(window).width() < 1024) {
         $('html, body').animate({ scrollTop: 400 }, 'slow');
@@ -131,6 +132,28 @@ $(document).ready(() => {
     $('.error-message').hide();
     $('textarea').focus();
   });
+});
+
+//Reveals scroll-to-top-of-page button when user scrolls down page
+$(document).ready(() => {
+  $(window).scroll(() => {
+    if ($(window).scrollTop() > 400) {
+      $('#float-button:hidden').show().animate({opacity: 0.9}, 1500);
+    } else if ($(window).scrollTop() < 400) {
+      $('#float-button:visible').fadeOut(1000);
+    }
+  })
+});
+
+//Scrolls window to top of page when button is clicked
+$(document).ready(() => {
+  $('#float-button').click(() => {
+    if ($(window).width() < 1024) {
+      $('html, body').animate({ scrollTop: 400 }, 'slow');
+    } else {
+      $('html, body').animate({ scrollTop: 0 }, 'slow');
+    }
+  })
 });
 
 //Function that counts the number of characters left of the 140 character limit. Turns red at negative values.
