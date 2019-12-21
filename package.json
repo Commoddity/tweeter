@@ -14,13 +14,10 @@
     "body-parser": "^1.15.2",
     "chance": "^1.0.2",
     "express": "^4.13.4",
-    "md5": "^2.1.0",
-    "moment": "^2.24.0"
+    "md5": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "^6.7.2",
-    "eslint-config-jquery": "^2.0.0",
-    "eslint-plugin-jquery": "^1.5.1",
     "nodemon": "^1.9.2"
   }
 }

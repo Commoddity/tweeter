@@ -16,6 +16,14 @@ header img {
   filter: invert(100%) saturate(29) hue-rotate(422deg) brightness(79%) contrast(97%) drop-shadow(2px 2px 0 purple) drop-shadow(-2px -2px 0 pink);
 }
 
+header h2 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 4px 4px 6px #000000;
+}
+
+/* This effect from Hover.css by Ian Lunn and used under a free personal/open source license */
 @-webkit-keyframes hvr-pulse-grow {
   to {
     -webkit-transform: scale(1.1);
@@ -50,11 +58,4 @@ header img {
   animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
-}
-
-header h2 {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.87);
-  font-family: 'Source Sans Pro', sans-serif;
-  text-shadow: 4px 4px 6px #000000;
 }
