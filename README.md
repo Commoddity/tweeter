@@ -20,7 +20,7 @@ Desktop View
 Mobile View
 
 # CSS Hover
-Includes one effect from the [Hover.css collection](https://ianlunn.github.io/Hover/) by [Ian Lunn](https://github.com/IanLunn) and used under a free open source license for personal use.
+Includes one effect from the [Hover.css](https://ianlunn.github.io/Hover/) collection by [Ian Lunn](https://github.com/IanLunn) and used under a free open source license for personal use.
 
 # Dependencies
 - Express
