@@ -38,21 +38,21 @@ const createTweetElement = (data) => {
       opacity: 1
     }, 1500);
     return tweet;
-  };
+};
   
-  //Populates error bar with HTML and error message
-  const createErrorBar = (errorText) => {
-    $('.error-message').html(`
-      <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger1'>
-      ${errorText}
-      <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger2'>`);
-    $('.error-message:hidden').slideToggle(500);
-    setTimeout(() => { $('.error-message:visible').slideToggle(500) }, 2000);
-  };
+//Populates error bar with HTML and error message
+const createErrorBar = (errorText) => {
+  $('.error-message').html(`
+    <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger1'>
+    ${errorText}
+    <img src='https://i.ibb.co/B4vDsHk/76402.png' class='danger2'>`);
+  $('.error-message:hidden').slideToggle(500);
+  setTimeout(() => { $('.error-message:visible').slideToggle(500) }, 2000);
+};
   
-  //Loops through Tweets and renders them on page via prepending to HTML container
-  const renderTweets = (tweets) => {
-    const queriedHTML = $('.container .tweets')
+//Loops through Tweets and renders them on page via prepending to HTML container
+const renderTweets = (tweets) => {
+  const queriedHTML = $('.container .tweets')
   for (let i = loadedTweets; i < tweets.length; i++) {
     loadedTweets++;
     const tweetElement = createTweetElement(tweets[i]);
